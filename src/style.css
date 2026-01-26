@@ -9,7 +9,14 @@
   font-synthesis: none;
   text-rendering: optimizeLegibility;
   -webkit-font-smoothing: antialiased;
+  -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
 }
 
 body {
@@ -20,7 +27,15 @@ body {
   min-height: 100vh;
   background-color: #FFF8E1;
   /* Warm cream background */
+  /* Warm cream background */
   color: #5D4037;
+  font-size: 16px;
+}
+
+@media (min-width: 600px) {
+  body {
+    font-size: 18px;
+  }
 }
 
 #app {

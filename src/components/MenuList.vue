@@ -1,4 +1,6 @@
 <script setup>
+import { computed } from 'vue'
+
 const props = defineProps({
   dishes: {
     type: Array,
@@ -7,11 +9,15 @@ const props = defineProps({
 })
 
 defineEmits(['select'])
+
+const displayDishes = computed(() => {
+  return props.dishes.filter(d => d.category !== '出去吃')
+})
 </script>
 
 <template>
   <div class="menu-list">
-    <div v-for="dish in dishes" :key="dish.id" class="menu-item" @click="$emit('select', dish)">
+    <div v-for="dish in displayDishes" :key="dish.id" class="menu-item" @click="$emit('select', dish)">
       <span class="item-emoji">{{ dish.emoji }}</span>
       <span class="item-name">{{ dish.name }}</span>
     </div>
