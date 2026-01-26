@@ -150,9 +150,10 @@ const triggerEatOut = () => {
   display: flex;
   flex-direction: column;
   align-items: center;
-  width: 100%;
-  padding-bottom: 100px;
-  /* Space for cart */
+  min-height: 70vh;
+  gap: 2rem;
+  padding-bottom: 42vh;
+  /* Ensure space for the 40vh max-height cart */
 }
 
 .categories {

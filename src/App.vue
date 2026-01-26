@@ -75,7 +75,7 @@ const closeModal = () => {
         <div v-else-if="currentView === 'summary'" class="summary-view">
           <h2>🎉 今日菜单</h2>
           <div class="summary-list">
-            <div v-for="dish in cart" :key="dish.id" class="summary-item">
+            <div v-for="dish in cart" :key="dish.id" class="summary-item" @click="handleSelectDish(dish)">
               <span class="emoji">{{ dish.emoji }}</span>
               <div class="info">
                 <h3>{{ dish.name }}</h3>
@@ -158,6 +158,12 @@ const closeModal = () => {
   align-items: center;
   gap: 1rem;
   box-shadow: 0 4px 10px rgba(0, 0, 0, 0.05);
+  cursor: pointer;
+  transition: transform 0.2s;
+}
+
+.summary-item:active {
+  transform: scale(0.98);
 }
 
 .summary-item .emoji {
