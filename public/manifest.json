@@ -1,0 +1,17 @@
+{
+    "name": "吴某吃点啥",
+    "short_name": "吴某吃点啥",
+    "description": "家庭菜单选择助手",
+    "theme_color": "#FFF8E1",
+    "background_color": "#FFF8E1",
+    "display": "standalone",
+    "orientation": "portrait",
+    "start_url": "./index.html",
+    "icons": [
+        {
+            "src": "favicon.png",
+            "sizes": "any",
+            "type": "image/png"
+        }
+    ]
+}
