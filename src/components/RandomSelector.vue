@@ -21,7 +21,7 @@ const selectedCategory = ref('全部')
 const consecutiveSkips = ref(0)
 const showEatOutPrompt = ref(false)
 
-const categories = ['全部', '主食', '小炒', '大菜', '汤', '甜品', '出去吃']
+const categories = ['全部', '主食', '小炒', '大菜', '汤', '凉菜', '甜品', '出去吃']
 
 // Filter dishes based on category
 const filteredDishes = computed(() => {

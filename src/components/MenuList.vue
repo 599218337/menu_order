@@ -11,7 +11,7 @@ const props = defineProps({
 defineEmits(['select'])
 
 const selectedCategory = ref('全部')
-const categories = ['全部', '主食', '小炒', '大菜', '汤', '甜品']
+const categories = ['全部', '主食', '小炒', '大菜', '汤', '凉菜', '甜品',]
 
 const displayDishes = computed(() => {
   let list = props.dishes.filter(d => d.category !== '出去吃')
